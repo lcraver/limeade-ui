@@ -2,7 +2,7 @@
   "name": "limeade-ui",
   "theme": "ui",
   "version": "0.2.1",
-  "description": "A minimal ui theme for Atom.",
+  "description": "A minimal ui theme for Atom. [Still under development]",
   "license": "MIT",
   "repository": "https://github.com/lcraver/limeade-ui",
   "engines": {
