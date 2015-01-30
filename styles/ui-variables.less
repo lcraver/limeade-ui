@@ -1,14 +1,14 @@
 // Colors
 
-@text-color: #aaa;
-@text-color-subtle: #555;
-@text-color-highlight: #fff;
+@text-color: @secondary-text-icon;
+@text-color-subtle: @disabled-text-icon;
+@text-color-highlight: @primary-text-icon;
 @text-color-selected: @text-color-highlight;
 
-@text-color-info: #5293d8;
-@text-color-success: #26c26a;
-@text-color-warning: #ff982d;
-@text-color-error: #c00;
+@text-color-info: #2196F3;
+@text-color-success: #4CAF50;
+@text-color-warning: #FFC107;
+@text-color-error: #f44336;
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -16,14 +16,14 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
-@background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #4182C4;
+@background-color-info: @text-color-info;
+@background-color-success: @text-color-success;
+@background-color-warning: @text-color-warning;
+@background-color-error: @text-color-error;
+@background-color-highlight: @white;
+@background-color-selected: @primary-color-hover;
 
-@app-background-color: #78909C;
+@app-background-color:@grey;
 
 @base-background-color: lighten(@tool-panel-background-color, 5%);
 @base-border-color: rgba(0, 0, 0, 0.5);
@@ -34,7 +34,7 @@
 @input-background-color: #212224;
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: #1d1f21;
+@tool-panel-background-color: @grey;
 @tool-panel-border-color: @base-border-color;
 
 @inset-panel-background-color: #161719;
@@ -95,6 +95,8 @@
 @md-remove-circle-outline: "\f113";
 @md-remove-circle: "\f112";
 @md-edit: "\f1fc";
+@md-expand-more: "\f29e";
+@md-expand-less: "\f29d";
 
 @icon-font: 'Material-Design-Iconic-Font';
 

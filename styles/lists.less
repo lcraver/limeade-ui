@@ -128,3 +128,17 @@ li.ui-draggable-dragging, li.ui-sortable-helper {
   background: @background-color-highlight;
   box-shadow: 0 0 1px @base-border-color;
 }
+
+.list-nested-item.collapsed {
+  .list-item:before {
+    font-family: @icon-font !important;
+    content: @md-expand-more !important;
+  }
+}
+
+.list-nested-item {
+  .list-item:before {
+    font-family: @icon-font !important;
+    content: @md-expand-less !important;
+  }
+}

@@ -21,20 +21,19 @@ atom-workspace { // specificity
       background-color: @tab-background-color;
       line-height: @tab-height;
       height: @tab-height;
-      //padding-top: 8px;
       padding-left: 8px;
       position: fixed;
-      //top: @tab-height;
       width: 100%;
       z-index: 1001;
       margin-top: -@tab-height;
-      color: @secondary-text-icon;
-      & .name {
+      color: @secondary-text-icon !important;
+      &.name {
         font-weight: 400;
       }
     }
 
-    & .directory {
+    &.directory {
+
       .text(normal);
 
       &.status-added { .text(success); }
@@ -43,7 +42,7 @@ atom-workspace { // specificity
       &.status-removed { .text(error); }
       &.status-renamed { .text(warning); }
       &.selected {
-        //color: @text-color-selected;
+        color: @primary-text-icon;
         &:before {
           background-color: @background-color-selected;
         }
@@ -83,9 +82,9 @@ atom-workspace { // specificity
         z-index: 1003;
       }
       &:hover {
-        //color: @text-color-highlight;
+        color: @text-color-highlight;
         &:before {
-          background-color: @background-color-highlight;
+          background-color: @white;
           left: -100%;
           right: 0;
           height: 24px !important;
