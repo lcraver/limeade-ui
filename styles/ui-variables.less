@@ -23,28 +23,28 @@
 @background-color-highlight: @white;
 @background-color-selected: @primary-color-hover;
 
-@app-background-color:@grey;
+@app-background-color: @grey;
 
-@base-background-color: lighten(@tool-panel-background-color, 5%);
-@base-border-color: rgba(0, 0, 0, 0.5);
+@base-background-color: @grey;
+@base-border-color: @black;
 
 @pane-item-background-color: @base-background-color;
-@pane-item-border-color: rgba(0, 0, 0, 0.5);
+@pane-item-border-color: @black;
 
 @input-background-color: #212224;
-@input-border-color: @base-border-color;
+@input-border-color: @accent-color;
 
-@tool-panel-background-color: @grey;
+@tool-panel-background-color: @primary-color;
 @tool-panel-border-color: @base-border-color;
 
 @inset-panel-background-color: #161719;
 @inset-panel-border-color: @base-border-color;
 
 @panel-heading-background-color: #43484d;
-@panel-heading-border-color: fadein(@base-border-color, 10%);
+@panel-heading-border-color: @base-border-color;
 
 @overlay-background-color: #202123;
-@overlay-border-color: @background-color-highlight;
+@overlay-border-color: @base-border-color;
 
 @button-background-color: #43484d;
 @button-background-color-hover: lighten(@button-background-color, 5%);
@@ -55,9 +55,9 @@
 @tab-bar-border-color: darken(@tab-background-color-active, 10%);
 @tab-background-color: @primary-color;
 @tab-background-color-active: @primary-color;
-@tab-border-color: #484848;
+@tab-border-color: @primary-text-icon;
 
-@tree-view-background-color: @tool-panel-background-color;
+@tree-view-background-color: @grey;
 @tree-view-border-color: @tool-panel-border-color;
 
 @scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
@@ -80,14 +80,19 @@
 @secondary-text-icon: fade(@black, 54%);
 @primary-text-icon: fade(@black, 87%);
 
+@dividers-white: fade(@white, 12%);
+@disabled-text-icon-white: fade(@white, 26%);
+@secondary-text-icon-white: fade(@white, 54%);
+@primary-text-icon-white: fade(@white, 87%);
+
 @primary-color-light: #CFD8DC;
 @primary-color: rgb(15,157,88);
 @primary-color-dark: #1B5E20;
 @primary-color-hover: rgb(84,155,121);
 
 @accent-color-light: #C8E6C9;
-@accent-color: #4CAF50;
-@accent-color-dark: #1B5E20;
+@accent-color: #CDDC39;
+@accent-color-dark: #AFB42B;
 
 // Icons
 @md-cancel: "\f293";
