@@ -53,8 +53,8 @@
 
 @tab-bar-background-color: #1DE9B6;
 @tab-bar-border-color: darken(@tab-background-color-active, 10%);
-@tab-background-color: #546E7A;
-@tab-background-color-active: #222;
+@tab-background-color: @primary-color-light;
+@tab-background-color-active: @primary-color;
 @tab-border-color: #484848;
 
 @tree-view-background-color: @tool-panel-background-color;
@@ -68,6 +68,34 @@
 @ui-site-color-3: @background-color-warning; // orange
 @ui-site-color-4: #db2ff4; // purple
 @ui-site-color-5: #f5e11d; // yellow
+
+// Material Design Colors
+
+@black: #000000;
+@white: #FFFFFF;
+@grey: #eeeeee;
+
+@dividers: fade(@black, 12%);
+@disabled-text-icon: fade(@black, 26%);
+@secondary-text-icon: fade(@black, 54%);
+@primary-text-icon: fade(@black, 87%);
+
+@primary-color-light: #CFD8DC;
+@primary-color: rgb(15,157,88);
+@primary-color-dark: #1B5E20;
+
+@accent-color-light: #C8E6C9;
+@accent-color: #4CAF50;
+@accent-color-dark: #1B5E20;
+
+// Icons
+@md-cancel: "\f293";
+@md-close: "\f29a";
+@md-remove-circle-outline: "\f113";
+@md-remove-circle: "\f112";
+@md-edit: "\f1fc";
+
+@icon-font: 'Material-Design-Iconic-Font';
 
 
 // Sizes

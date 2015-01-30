@@ -9,12 +9,11 @@
 
 .tab-bar {
   height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-  background: @tab-bar-background-color;
+  background: @grey;
   overflow-x: auto;
   overflow-y: hidden;
 
   .tab {
-    border-right: solid 1px #78909C;
     position: relative;
     max-width: @tab-max-width + @tab-side-border-size;
     min-width: @tab-min-width + @tab-side-border-size;
@@ -22,61 +21,128 @@
     line-height: @tab-height;
     padding: @tab-top-padding 0 @tab-bottom-border-height 0;
     //margin: 0 20px 0 5px;
-    color: @text-color;
 
-    background-color: @tab-background-color;
+    color: @secondary-text-icon;
+    border-bottom: solid 0px @primary-text-icon;
+
+    background-color: @primary-color;
     transition: color .1s ease-in;
-
-    .close-icon {
-      font-size: @font-size;
-      top: -1px;
-      right: 0;
-      z-index: 3;
-      text-align: right;
-      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-      color: @text-color;
-      margin: 0 14px 0 0;
-
-      &:hover {
-        color: inherit;
-      }
-    }
-
-    &.modified:not(:hover) .close-icon {
-      right: 0;
-      top: @tab-height/2 - @modified-icon-width/2 + 1px;
-      width: @modified-icon-width;
-      height: @modified-icon-width;
-    }
-
-    &.modified:hover .close-icon:hover {
-      color: @text-color-highlight;
-    }
+    transition: border .1s ease-in;
 
     .title{
       line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
       font-size: @font-size;
       z-index: 1;
-      padding: 0 14px 0 14px
+      padding: 0 14px 0 14px;
+    }
+
+    .close-icon {
+      font-size: @font-size;
+      right: 0;
+      z-index: 3;
+      text-align: right;
+      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      color: @secondary-text-icon;
+      margin: 0 14px 0 0;
+
+      &:hover {
+        color: @white;
+      }
+
+      &:before {
+        font-family: @icon-font !important;
+        content: @md-remove-circle !important;
+      }
+    }
+  }
+
+  .tab.modified:not(:hover) {
+    .close-icon {
+      right: 0 !important;
+      text-align: right;
+      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      color: @secondary-text-icon !important;
+      margin: 0 14px 0 0;
+      display: block !important;
+      top: 0 !important;
+      border-radius: 0px !important;
+      border: none !important;
+      &:before {
+        display: inline-block !important;
+        font-family: @icon-font !important;
+        content: @md-edit !important;
+      }
+    }
+  }
+
+  .tab.modified {
+    .close-icon {
+      right: 0 !important;
+      text-align: right;
+      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      color: @secondary-text-icon !important;
+      margin: 0 10px 0 0;
+      display: block !important;
+      top: 0 !important;
+      border-radius: 0px !important;
+      border: none !important;
+      &:before {
+        display: inline-block !important;
+        font-family: @icon-font !important;
+        content: @md-edit !important;
+      }
+    }
+
+    .close-icon:hover {
+      color: @white !important;
+      &:before {
+        display: inline-block !important;
+        font-family: @icon-font !important;
+        content: @md-remove-circle !important;
+      }
     }
   }
 
   .tab.active {
     z-index: 1;
-    color: @text-color-highlight;
+    color: @primary-text-icon;
+    background-color: @primary-color;
+    border-bottom: solid 4px @primary-text-icon;
 
     .close-icon {
-      line-height: @tab-height - 1px;
-      color: @text-color;
+      right: 0 !important;
+      text-align: right;
+      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      color: @secondary-text-icon !important;
+      margin: 0 10px 0 0;
+      display: block !important;
+      top: 0 !important;
+      border-radius: 0px !important;
+      border: none !important;
+      &:before {
+        display: inline-block !important;
+        font-family: @icon-font !important;
+        content: @md-remove-circle !important;
+      }
+    }
+
+    .close-icon:hover {
+      margin: 0 14px 0 0;
+      color: @white !important;
+      &:before {
+        display: inline-block !important;
+        font-family: @icon-font !important;
+        content: @md-remove-circle !important;
+      }
     }
   }
 
   .tab:hover {
-    color: @text-color-highlight;
+    background-color: rgb(84,155,121);
   }
 
   .tab.active:hover .close-icon {
-    color: @text-color;
+    color: @primary-text-icon;
 
     &:hover {
       color: inherit;
@@ -85,7 +151,6 @@
 
   .placeholder {
     height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-    margin-left: -9px; // center between tabs
     pointer-events: none;
     &:after {
       top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
