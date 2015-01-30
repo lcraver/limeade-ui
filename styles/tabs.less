@@ -8,18 +8,19 @@
 @tab-min-width: 80px;
 
 .tab-bar {
-  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+  height: @tab-height;
   background: @grey;
   overflow-x: auto;
   overflow-y: hidden;
+  z-index: 1002;
 
   .tab {
     position: relative;
-    max-width: @tab-max-width + @tab-side-border-size;
-    min-width: @tab-min-width + @tab-side-border-size;
+    max-width: @tab-max-width;
+    min-width: @tab-min-width;
     height: @tab-height;
     line-height: @tab-height;
-    padding: @tab-top-padding 0 @tab-bottom-border-height 0;
+    padding: @tab-top-padding 0 0 0;
     //margin: 0 20px 0 5px;
 
     color: @secondary-text-icon;
@@ -29,8 +30,9 @@
     transition: color .1s ease-in;
     transition: border .1s ease-in;
 
+
     .title{
-      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      line-height: @tab-height;
       font-size: @font-size;
       z-index: 1;
       padding: 0 14px 0 14px;
@@ -41,7 +43,7 @@
       right: 0;
       z-index: 3;
       text-align: right;
-      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      line-height: @tab-height;
       color: @secondary-text-icon;
       margin: 0 14px 0 0;
 
@@ -51,7 +53,7 @@
 
       &:before {
         font-family: @icon-font !important;
-        content: @md-remove-circle !important;
+        content: @md-close !important;
       }
     }
   }
@@ -60,7 +62,7 @@
     .close-icon {
       right: 0 !important;
       text-align: right;
-      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      line-height: @tab-height;
       color: @secondary-text-icon !important;
       margin: 0 17px 0 0;
       display: block !important;
@@ -79,7 +81,7 @@
     .close-icon {
       right: 0 !important;
       text-align: right;
-      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      line-height: @tab-height;
       color: @secondary-text-icon !important;
       margin: 0 14px 0 0;
       display: block !important;
@@ -98,7 +100,7 @@
       &:before {
         display: inline-block !important;
         font-family: @icon-font !important;
-        content: @md-remove-circle !important;
+        content: @md-close !important;
       }
     }
   }
@@ -112,7 +114,7 @@
     .close-icon {
       right: 0 !important;
       text-align: right;
-      line-height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      line-height: @tab-height;
       color: @secondary-text-icon !important;
       margin: 0 14px 0 0;
       display: block !important;
@@ -122,7 +124,7 @@
       &:before {
         display: inline-block !important;
         font-family: @icon-font !important;
-        content: @md-remove-circle !important;
+        content: @md-close !important;
       }
     }
 
@@ -131,13 +133,13 @@
       &:before {
         display: inline-block !important;
         font-family: @icon-font !important;
-        content: @md-remove-circle !important;
+        content: @md-close !important;
       }
     }
   }
 
   .tab:hover {
-    background-color: rgb(84,155,121);
+    background-color:@primary-color-hover;
   }
 
   .tab.active:hover .close-icon {
@@ -149,10 +151,10 @@
   }
 
   .placeholder {
-    height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+    height: @tab-height;
     pointer-events: none;
     &:after {
-      top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
+      top: @tab-height - 2px;
     }
   }
 }
