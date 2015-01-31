@@ -18,7 +18,11 @@ atom-panel, .tool-panel {
   &.bottom, &.panel-bottom {
     //border-top: 1px solid @tool-panel-border-color;
     //box-shadow: inset 0 1px 0 @background-color-highlight;
-    color: @white;
+    color: @secondary-text-icon;
+
+    .subtle-info-message {
+      color: @disabled-text-icon !important;
+    }
   }
 
   &.left, &.panel-left {
